@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="testsuite" verbose="1" >
+    <listeners>
+        <listener class-name="com.orangehrm.uk.listeners.Listeners"></listener>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"></listener>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"></listener>
+    </listeners>
+
+    <test name="Login Test" >
+    <parameter name="Name" value="admin"></parameter>
+    <parameter name="Password" value="admin123"></parameter>
+    <classes>
+        <class name="com.orangehrm.uk.testsuite.LoginTest" />
+    </classes>
+</test>
+    <test name="Login Test1" >
+        <parameter name="Name1" value="xyzw"></parameter>
+        <parameter name="Password1" value="xyzw123"></parameter>
+        <classes>
+            <class name="com.orangehrm.uk.testsuite.LoginTest1" />
+        </classes>
+    </test>
+</suite>
